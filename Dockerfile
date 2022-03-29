@@ -1,5 +1,5 @@
 FROM  centos:centos7
-RUN   yum install httpd
+RUN   yum install httpd -y
 RUN  sed -i "s/Listen 80/Listen 8080/g" /etc/httpd/conf/httpd.conf
 COPY  src/  /var/www/html/
 RUN chown apache:apache  /var/run/httpd  /var/log/httpd  
